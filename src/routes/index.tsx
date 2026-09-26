@@ -130,7 +130,7 @@ const floaters = [
     src: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=300&h=300&q=70",
     alt: "",
     className:
-      "left-[4%] top-[16%] w-24 opacity-80 animate-float-a sm:w-32",
+      "left-[2%] top-[24%] w-24 opacity-70 animate-float-a sm:w-32",
   },
   {
     src: "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=300&h=300&q=70",
