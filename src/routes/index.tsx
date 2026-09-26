@@ -91,7 +91,7 @@ function Navbar() {
           <button
             aria-label="Toggle menu"
             onClick={() => setOpen((v) => !v)}
-            className="rounded-full border border-border p-2 text-gold md:hidden"
+            className="rounded-full border border-border p-3 text-gold md:hidden"
           >
             {open ? <X size={20} /> : <Menu size={20} />}
           </button>
@@ -142,7 +142,7 @@ const floaters = [
     src: "https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=300&h=300&q=70",
     alt: "",
     className:
-      "bottom-[10%] left-[38%] w-20 opacity-75 animate-float-c sm:w-24",
+      "bottom-[10%] left-[38%] hidden w-20 opacity-75 animate-float-c sm:block sm:w-24",
   },
   {
     src: "https://images.unsplash.com/photo-1608039755401-742074f0548d?auto=format&fit=crop&w=300&h=300&q=70",
@@ -179,7 +179,7 @@ function Hero() {
           <span className="inline-block rounded-full border border-gold/40 px-4 py-1 text-xs font-bold uppercase tracking-[0.2em] text-gold">
             H-13, Islamabad
           </span>
-          <h1 className="mt-5 text-5xl font-black uppercase leading-[0.95] tracking-tight sm:text-6xl lg:text-7xl">
+          <h1 className="mt-5 text-4xl font-black uppercase leading-[0.95] tracking-tight sm:text-6xl lg:text-7xl">
             Good Food
             <br />
             <span className="text-gold-gradient">Best Decisions.</span>
@@ -221,7 +221,7 @@ function MenuSection() {
   return (
     <section id="menu" className="mx-auto max-w-6xl scroll-mt-24 px-4 py-16 md:py-24">
       <div className="text-center">
-        <h2 className="text-4xl font-black uppercase tracking-tight sm:text-5xl">
+        <h2 className="text-3xl font-black uppercase tracking-tight sm:text-4xl md:text-5xl">
           The <span className="text-gold-gradient">Menu</span>
         </h2>
         <p className="mt-3 text-muted-foreground">Everything freshly made to order. Prices in PKR.</p>
@@ -249,7 +249,7 @@ function MenuSection() {
         </p>
       )}
 
-      <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {cat.items.map((item) => (
           <article
             key={item.name}
@@ -296,13 +296,13 @@ function Combo() {
             <span className="inline-block rounded-full bg-gold-gradient px-4 py-1 text-xs font-black uppercase tracking-widest text-primary-foreground">
               Featured Combo
             </span>
-            <h2 className="mt-4 text-4xl font-black uppercase leading-none sm:text-5xl">
+            <h2 className="mt-4 text-3xl font-black uppercase leading-none sm:text-4xl md:text-5xl">
               Main Character <span className="text-gold-gradient">Combo</span>
             </h2>
             <p className="mt-4 text-lg font-semibold text-foreground/85">
               Zinger Burger + Small Pizza Fries + 250ml Drink
             </p>
-            <p className="mt-5 text-5xl font-black text-gold-gradient">Rs 700/-</p>
+            <p className="mt-5 text-4xl font-black text-gold-gradient sm:text-5xl">Rs 700/-</p>
             <div className="mt-7">
               <GoldButton href={`tel:${PHONE}`}>Grab The Combo</GoldButton>
             </div>
@@ -326,7 +326,7 @@ function Location() {
     <section id="location" className="mx-auto max-w-6xl scroll-mt-24 px-4 py-16 md:py-24">
       <div className="grid gap-8 md:grid-cols-2">
         <div id="order" className="scroll-mt-24">
-          <h2 className="text-4xl font-black uppercase tracking-tight sm:text-5xl">
+          <h2 className="text-3xl font-black uppercase tracking-tight sm:text-4xl md:text-5xl">
             Find <span className="text-gold-gradient">Us</span>
           </h2>
           <p className="mt-3 text-muted-foreground">
@@ -415,7 +415,7 @@ function Footer() {
 
 function Index() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen overflow-x-hidden bg-background text-foreground">
       <Navbar />
       <main>
         <Hero />
