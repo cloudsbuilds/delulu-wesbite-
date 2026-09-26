@@ -139,7 +139,7 @@ export const menu: MenuCategory[] = [
         name: "Loaded Fries",
         desc: "Cheese, chicken chunks, sauces and herbs.",
         price: "250 / 450",
-        img: u("photo-1630384060421-cb20d0e0649d"),
+        img: u("photo-1534080564583-6be75777b70a"),
       },
       {
         name: "Pizza Fries",
