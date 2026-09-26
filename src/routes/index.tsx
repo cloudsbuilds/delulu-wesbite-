@@ -125,11 +125,56 @@ function Navbar() {
   );
 }
 
+const floaters = [
+  {
+    src: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=300&h=300&q=70",
+    alt: "",
+    className:
+      "left-[4%] top-[16%] w-24 opacity-80 animate-float-a sm:w-32",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=300&h=300&q=70",
+    alt: "",
+    className:
+      "right-[6%] top-[8%] w-20 opacity-70 blur-[1px] animate-float-b sm:w-28",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=300&h=300&q=70",
+    alt: "",
+    className:
+      "bottom-[10%] left-[38%] w-20 opacity-75 animate-float-c sm:w-24",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1608039755401-742074f0548d?auto=format&fit=crop&w=300&h=300&q=70",
+    alt: "",
+    className:
+      "bottom-[22%] right-[30%] hidden w-24 opacity-60 blur-[2px] animate-float-b md:block",
+  },
+];
+
 function Hero() {
   return (
     <section id="top" className="relative overflow-hidden">
       <div className="pointer-events-none absolute -left-24 top-10 h-72 w-72 rounded-full bg-gold/15 blur-3xl" />
-      <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-14 md:grid-cols-2 md:py-24">
+
+      {/* Ambient floating food images behind the headline */}
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0">
+        {floaters.map((f) => (
+          <img
+            key={f.src}
+            src={f.src}
+            alt={f.alt}
+            width={300}
+            height={300}
+            loading="lazy"
+            className={`absolute rounded-2xl border border-gold/20 object-cover shadow-xl ${f.className}`}
+          />
+        ))}
+        {/* readability overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/40 to-background/80" />
+      </div>
+
+      <div className="relative z-10 mx-auto grid max-w-6xl items-center gap-10 px-4 py-14 md:grid-cols-2 md:py-24">
         <div className="animate-fade-in">
           <span className="inline-block rounded-full border border-gold/40 px-4 py-1 text-xs font-bold uppercase tracking-[0.2em] text-gold">
             H-13, Islamabad
