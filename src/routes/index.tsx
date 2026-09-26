@@ -204,19 +204,33 @@ function MenuSection() {
         </p>
       )}
 
-      <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {cat.items.map((item) => (
           <article
             key={item.name}
-            className="card-lift animate-fade-in rounded-3xl border border-border bg-card p-6"
+            className="card-lift animate-fade-in overflow-hidden rounded-xl border border-border bg-card shadow-lg"
           >
-            <div className="grid grid-cols-[minmax(0,1fr)_auto] items-start gap-3">
-              <h3 className="min-w-0 text-lg font-extrabold uppercase leading-tight">{item.name}</h3>
-              <span className="shrink-0 rounded-full bg-gold-gradient px-3 py-1 text-sm font-black text-primary-foreground">
-                {item.price}
-              </span>
+            <div className="aspect-[4/3] w-full overflow-hidden">
+              <img
+                src={item.img}
+                alt={item.name}
+                width={800}
+                height={600}
+                loading="lazy"
+                className="h-full w-full object-cover transition-transform duration-300 ease-in-out hover:scale-105"
+              />
             </div>
-            <p className="mt-3 text-sm text-muted-foreground">{item.desc}</p>
+            <div className="p-6">
+              <div className="grid grid-cols-[minmax(0,1fr)_auto] items-start gap-3">
+                <h3 className="min-w-0 text-lg font-black uppercase leading-tight tracking-tight text-foreground">
+                  {item.name}
+                </h3>
+                <span className="shrink-0 rounded-full bg-gold-gradient px-3 py-1 text-sm font-black text-primary-foreground shadow-md">
+                  {item.price}
+                </span>
+              </div>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{item.desc}</p>
+            </div>
           </article>
         ))}
       </div>
