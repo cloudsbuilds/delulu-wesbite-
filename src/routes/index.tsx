@@ -170,8 +170,8 @@ function Hero() {
 }
 
 function MenuSection() {
-  const [active, setActive] = useState(menu[0].id);
-  const cat = menu.find((c) => c.id === active) ?? menu[0];
+  const [active, setActive] = useState(menu[0]!.id);
+  const cat = menu.find((c) => c.id === active) ?? menu[0]!;
 
   return (
     <section id="menu" className="mx-auto max-w-6xl scroll-mt-24 px-4 py-16 md:py-24">
