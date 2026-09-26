@@ -157,7 +157,7 @@ export const menu: MenuCategory[] = [
         name: "6pcs Crispy Chicken Wings",
         desc: "Crunchy outside, juicy inside, served with dip.",
         price: "350/-",
-        img: u("photo-1527477396000-e27163b501c2"),
+        img: u("photo-1569058242253-92a9c755a0ec"),
       },
     ],
   },
